@@ -1,8 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 export default function HeroSection() {
-  const [showEventsModal, setShowEventsModal] = useState(false)
-
   return (
     <section
       id="home"
@@ -66,49 +64,7 @@ export default function HeroSection() {
           >
             MEET THE ROSTER
           </button>
-          <button
-            onClick={() => setShowEventsModal(true)}
-            className="font-oswald font-semibold tracking-wider text-base px-8 py-4 bg-transparent border border-white/20 hover:border-white/50 text-white/60 hover:text-white hover:bg-white/5 rounded transition-all duration-200 w-full sm:w-auto"
-          >
-            SUBSCRIBE
-          </button>
         </div>
-
-        {/* Events Coming Soon Modal */}
-        {showEventsModal && (
-          <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm"
-            onClick={() => setShowEventsModal(false)}
-          >
-            <div
-              className="relative bg-[#111] border border-[#B3995D]/40 rounded-lg px-10 py-10 max-w-sm w-full mx-4 text-center shadow-2xl"
-              onClick={(e) => e.stopPropagation()}
-            >
-              {/* Gold accent line */}
-              <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-[#B3995D] to-transparent rounded-t-lg" />
-
-              {/* Icon */}
-              <div className="w-14 h-14 rounded-full bg-[#AA0000]/20 border border-[#AA0000]/40 flex items-center justify-center mx-auto mb-5">
-                <svg className="w-7 h-7 text-[#AA0000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-              </div>
-
-              <h2 className="font-oswald text-2xl font-bold text-white tracking-wider mb-2">EVENTS</h2>
-              <p className="font-oswald text-[#B3995D] tracking-[0.2em] text-sm mb-1">COMING SOON</p>
-              <p className="text-white/40 text-sm mt-3 leading-relaxed">
-                Stay tuned — 2026–2027 season events will be announced here.
-              </p>
-
-              <button
-                onClick={() => setShowEventsModal(false)}
-                className="mt-7 font-oswald font-semibold tracking-wider text-sm px-7 py-3 bg-[#AA0000] hover:bg-[#cc0000] text-white rounded transition-all duration-200 red-glow"
-              >
-                GOT IT
-              </button>
-            </div>
-          </div>
-        )}
 
         {/* Scroll indicator */}
         <div className="fade-in-up delay-500 mt-20 flex flex-col items-center gap-2 text-white/30">
