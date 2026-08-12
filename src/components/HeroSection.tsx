@@ -60,9 +60,15 @@ export default function HeroSection() {
           </button>
           <button
             onClick={() => document.getElementById('roster')?.scrollIntoView({ behavior: 'smooth' })}
-            className="font-oswald font-semibold tracking-wider text-base px-8 py-4 bg-transparent border border-[#B3995D]/50 hover:border-[#B3995D] text-[#B3995D] hover:text-white hover:bg-[#B3995D]/10 rounded transition-all duration-200 w-full sm:w-auto"
+            className="font-oswald font-semibold tracking-wider text-base px-8 py-4 bg-transparent border border-[#B3995D]/50 hover:border-[#B3995D] text-[#B3995D] hover:text-white hover:bg-[#B3995D]/10 rounded transition-all duration-200 w-full sm:w-auto cursor-pointer"
           >
             MEET THE ROSTER
+          </button>
+          <button
+            onClick={() => document.getElementById('events')?.scrollIntoView({ behavior: 'smooth' })}
+            className="font-oswald font-semibold tracking-wider text-base px-8 py-4 bg-transparent border border-white/20 hover:border-white/50 text-white/60 hover:text-white hover:bg-white/5 rounded transition-all duration-200 w-full sm:w-auto cursor-pointer"
+          >
+            EVENTS
           </button>
         </div>
 
